@@ -57,7 +57,7 @@ const Header = ({ isOpen }) => {
   return (
     <div className='header'>
       <h1>Julian's Pizza Co.</h1>
-      <h2> Our Menu</h2>
+      <h2 className='Menu'> Our Menu</h2>
       <p>{isOpen() ? "Authentic Italian cuisine" : ""}, all from our stone oven</p>
     </div>
   );
@@ -81,7 +81,7 @@ const Menu = ({ pizzaData }) => {
 };
 
 const Condition = (pizza) => {
-  return pizza.soldOut === false ? `$${pizza.price}` : "Sold Out";
+  return (pizza.soldOut === false ? `$${pizza.price}` : "Sold Out");
 };
 
 const Time = ({ isOpen }) => {
